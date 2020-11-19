@@ -5,26 +5,24 @@ It powers executable Go scripts and plugins, in embedded interpreters
 or interactive shells, on top of the Go runtime.
 "
   homepage "https://github.com/traefik/yaegi"
-  version "0.9.6"
+  version "0.9.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.6/yaegi_v0.9.6_darwin_amd64.tar.gz"
-    sha256 "d87eb4d9099f29947a05f1160f45156df18c9e815563bc47038380f3613bb3a8"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.6/yaegi_v0.9.6_linux_amd64.tar.gz"
-      sha256 "ae84f0e5c958a5f336043b9cdf82b98852540854409da29fe1702dff1b235196"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/traefik/yaegi/releases/download/v0.9.6/yaegi_v0.9.6_linux_arm64.tar.gz"
-        sha256 "f629fec458b6a715117efb5275b85542b0d8ce6665885a6f2a38d080ff5389d2"
-      else
-        url "https://github.com/traefik/yaegi/releases/download/v0.9.6/yaegi_v0.9.6_linux_armv6.tar.gz"
-        sha256 "7a28c61028730b942d514aa124703f49fa0104b226ceeb7b894c16a4a7acfd70"
-      end
-    end
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.7/yaegi_v0.9.7_darwin_amd64.tar.gz"
+    sha256 "85fe29240f42d13fb1f538f028aab55a84061330b5def7b3dfeab2275d4e3e59"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.7/yaegi_v0.9.7_linux_amd64.tar.gz"
+    sha256 "24cb235113562d3c556b4b2105bdbd7ee9e8a63c87a4986b84ed92d61794d345"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.7/yaegi_v0.9.7_linux_armv6.tar.gz"
+    sha256 "c0dfed7e87b66a5d17972dd4d40c592811434b0ecf3e388a2302e7b0a8f0fc42"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.7/yaegi_v0.9.7_linux_arm64.tar.gz"
+    sha256 "74fbab895b9392064b08b42d28baa391910e93fdc686f0095090adcb591dac26"
   end
 
   def install
