@@ -1,6 +1,6 @@
-# homebrew-tap 
+# homebrew-tap
 
-[![Build Status](https://travis-ci.com/traefik/homebrew-tap.svg?branch=master)](https://travis-ci.com/traefik/homebrew-tap)
+[![Build Status](https://github.com/traefik/homebrew-tap/workflows/Homebrew%20Tap/badge.svg)](https://github.com/traefik/homebrew-tap/actions)
 
 [Homebrew Taps](https://docs.brew.sh/Taps)
 
@@ -13,4 +13,3 @@ brew tap traefik/tap
 brew update
 brew install yaegi
 ```
-
