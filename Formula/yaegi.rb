@@ -8,24 +8,24 @@ It powers executable Go scripts and plugins, in embedded interpreters
 or interactive shells, on top of the Go runtime.
 "
   homepage "https://github.com/traefik/yaegi"
-  version "0.9.12"
+  version "0.9.13"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.12/yaegi_v0.9.12_darwin_amd64.tar.gz"
-    sha256 "bacef8b6d5e8e5bf75ab9eabccbb382b4272ad485877c72af0cbdd47a9663ebd"
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.13/yaegi_v0.9.13_darwin_amd64.tar.gz"
+    sha256 "f72c313d100b306c9e92da6a53b2f2174d237a229042bc4d7d4681b7b8fe8807"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.12/yaegi_v0.9.12_linux_amd64.tar.gz"
-    sha256 "92e5c4d85eaeccd9e25b7e5f0df4bd0eb53eb7b0f9b47299956fbc79ac8471b0"
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.13/yaegi_v0.9.13_linux_amd64.tar.gz"
+    sha256 "21c513d9c2d9693610474bccd1783da6ee0b527624e882433a5d6d9a0048ffe8"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.12/yaegi_v0.9.12_linux_armv6.tar.gz"
-    sha256 "48c98a90d8589a45f1ffe1d30ab7dfe67fa097d14e46d7ac0251db548ac1e165"
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.13/yaegi_v0.9.13_linux_armv6.tar.gz"
+    sha256 "28c4fde8f766c71bda8b77f6883e466465695ae35df172f5b30d76961c973672"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.12/yaegi_v0.9.12_linux_arm64.tar.gz"
-    sha256 "60273cfdf9982e6e1e6e38b3f15e5e1cbc8b7b418bf3f75fe3ff7eb19d3b55db"
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.13/yaegi_v0.9.13_linux_arm64.tar.gz"
+    sha256 "6a171e489e5cfef55e2e6bc7f4a9e05590db0ecd90af53ff2460462dd5bebcd1"
   end
 
   def install
