@@ -8,24 +8,28 @@ It powers executable Go scripts and plugins, in embedded interpreters
 or interactive shells, on top of the Go runtime.
 "
   homepage "https://github.com/traefik/yaegi"
-  version "0.9.13"
+  version "0.9.14"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.13/yaegi_v0.9.13_darwin_amd64.tar.gz"
-    sha256 "f72c313d100b306c9e92da6a53b2f2174d237a229042bc4d7d4681b7b8fe8807"
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.14/yaegi_v0.9.14_darwin_amd64.tar.gz"
+    sha256 "9775fd944ce64cc5f5aaf62cadb80d5b586dcaad47fd397d87e25ba0227862b7"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.14/yaegi_v0.9.14_darwin_arm64.tar.gz"
+    sha256 "44bef0ad41272156ad0f40ee645ea28cd48daaac4fbf82a0fee861720efebd4d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.13/yaegi_v0.9.13_linux_amd64.tar.gz"
-    sha256 "21c513d9c2d9693610474bccd1783da6ee0b527624e882433a5d6d9a0048ffe8"
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.14/yaegi_v0.9.14_linux_amd64.tar.gz"
+    sha256 "afb1adb0e26d0b7ff23d1c2135a06e656d7bf6915e9afea01906346843f039d8"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.13/yaegi_v0.9.13_linux_armv6.tar.gz"
-    sha256 "28c4fde8f766c71bda8b77f6883e466465695ae35df172f5b30d76961c973672"
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.14/yaegi_v0.9.14_linux_armv6.tar.gz"
+    sha256 "39a8a158da474b9c67187618eafc1e94f1789f336105ee722c7505166c1e7eb0"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/traefik/yaegi/releases/download/v0.9.13/yaegi_v0.9.13_linux_arm64.tar.gz"
-    sha256 "6a171e489e5cfef55e2e6bc7f4a9e05590db0ecd90af53ff2460462dd5bebcd1"
+    url "https://github.com/traefik/yaegi/releases/download/v0.9.14/yaegi_v0.9.14_linux_arm64.tar.gz"
+    sha256 "637a26b9c9b899888d9d42e5ddae083b5c46314b9c21f792b942eeb3eec8da9e"
   end
 
   def install
