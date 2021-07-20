@@ -8,32 +8,32 @@ It powers executable Go scripts and plugins, in embedded interpreters
 or interactive shells, on top of the Go runtime.
 "
   homepage "https://github.com/traefik/yaegi"
-  version "0.9.20"
+  version "0.9.21"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.20/yaegi_v0.9.20_darwin_amd64.tar.gz"
-      sha256 "92db9ca597c57d08e92cefc7fe6e4784d323ffbca2579f5efbe1fe9278a47b07"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_darwin_amd64.tar.gz"
+      sha256 "ddc502315fb300ee8915761f0c7d42cf4a3687d0244f73888bb4880f83f7022c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.20/yaegi_v0.9.20_darwin_arm64.tar.gz"
-      sha256 "c4d50fe9ae2a08c8c00691031f312fb2e7c550c37f468b9bb58eb0c713f9e773"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_darwin_arm64.tar.gz"
+      sha256 "9631706d0014f88badbd1eb8c10aae739ecd3c661d0a306e3ad1177cb33e50b2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.20/yaegi_v0.9.20_linux_amd64.tar.gz"
-      sha256 "efcb0c6ade1264118df9ba825636ec10fff41bae50deafc935fece88916cfc90"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_linux_amd64.tar.gz"
+      sha256 "c86c073629aa713a15fcc4722cec08dfefc4a69eca94a9e7ee79dd8c403b626e"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.20/yaegi_v0.9.20_linux_armv6.tar.gz"
-      sha256 "c1063a86b901fc8bce3f6198329e84397f7afcce1c0a9b521dbc46279aea57b6"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_linux_armv6.tar.gz"
+      sha256 "0a4dcdc4a56d19568c6ff06a8f61805c2e709a0dae0200fd2f05fdc71a95bcf3"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.20/yaegi_v0.9.20_linux_arm64.tar.gz"
-      sha256 "49085aa9962046943385061eff2e7d994940d9ba8a4c4cd621f035e1911b5c18"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_linux_arm64.tar.gz"
+      sha256 "9acd8c92673a0724689fd9b0896a8ff974ea7308dcf98958dd23c0852f2b1de1"
     end
   end
 
