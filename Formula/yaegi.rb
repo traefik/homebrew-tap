@@ -8,32 +8,28 @@ It powers executable Go scripts and plugins, in embedded interpreters
 or interactive shells, on top of the Go runtime.
 "
   homepage "https://github.com/traefik/yaegi"
-  version "0.9.21"
+  version "0.9.23"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_darwin_amd64.tar.gz"
-      sha256 "ddc502315fb300ee8915761f0c7d42cf4a3687d0244f73888bb4880f83f7022c"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_darwin_arm64.tar.gz"
-      sha256 "9631706d0014f88badbd1eb8c10aae739ecd3c661d0a306e3ad1177cb33e50b2"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.23/yaegi_v0.9.23_darwin_amd64.tar.gz"
+      sha256 "64c7bb5f77064295448ec6f99ab4397fe887704d8dc0db50cc3f176fbf94d56b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_linux_amd64.tar.gz"
-      sha256 "c86c073629aa713a15fcc4722cec08dfefc4a69eca94a9e7ee79dd8c403b626e"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.23/yaegi_v0.9.23_linux_amd64.tar.gz"
+      sha256 "80f3edcc7dadf487040c81fb03085758b1289553da126b808ada06143091e687"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_linux_armv6.tar.gz"
-      sha256 "0a4dcdc4a56d19568c6ff06a8f61805c2e709a0dae0200fd2f05fdc71a95bcf3"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.23/yaegi_v0.9.23_linux_armv6.tar.gz"
+      sha256 "36761e585148b8905837051afe23dd06e4688776c6e9de6506c9652663e8ed33"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/traefik/yaegi/releases/download/v0.9.21/yaegi_v0.9.21_linux_arm64.tar.gz"
-      sha256 "9acd8c92673a0724689fd9b0896a8ff974ea7308dcf98958dd23c0852f2b1de1"
+      url "https://github.com/traefik/yaegi/releases/download/v0.9.23/yaegi_v0.9.23_linux_arm64.tar.gz"
+      sha256 "12d4da873e58e4f5e7106e2ba7323565214b30b707b9a95c7a1047b8a9c890af"
     end
   end
 
