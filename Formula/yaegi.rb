@@ -8,20 +8,20 @@ It powers executable Go scripts and plugins, in embedded interpreters
 or interactive shells, on top of the Go runtime.
 "
   homepage "https://github.com/traefik/yaegi"
-  version "0.11.3"
+  version "0.12.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/traefik/yaegi/releases/download/v0.11.3/yaegi_v0.11.3_darwin_amd64.tar.gz"
-      sha256 "92c2ae1e7377b3c56669a4cd7043286ca7d68cb6fa62b3ef7f2e2a6a82931fac"
+      url "https://github.com/traefik/yaegi/releases/download/v0.12.0/yaegi_v0.12.0_darwin_amd64.tar.gz"
+      sha256 "5a9b2b24a9d8cc2a13e2f50c6d5770a992ea642b7efabd096607d4bc176fd71a"
 
       def install
         bin.install "yaegi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/traefik/yaegi/releases/download/v0.11.3/yaegi_v0.11.3_darwin_arm64.tar.gz"
-      sha256 "f89c9129106eb41b35c61f2a2c1d92c9ac0183eb3035e7682d1d9fb9389c8560"
+      url "https://github.com/traefik/yaegi/releases/download/v0.12.0/yaegi_v0.12.0_darwin_arm64.tar.gz"
+      sha256 "8f68b08da478060dc55bf893c566cc05754ec669cbcf48d10d795ac4118398db"
 
       def install
         bin.install "yaegi"
@@ -30,25 +30,25 @@ or interactive shells, on top of the Go runtime.
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/traefik/yaegi/releases/download/v0.11.3/yaegi_v0.11.3_linux_armv6.tar.gz"
-      sha256 "8888691619b68b93d0ee984d9c44d5f36b988a56fadd0a147c18e3259c034339"
+    if Hardware::CPU.intel?
+      url "https://github.com/traefik/yaegi/releases/download/v0.12.0/yaegi_v0.12.0_linux_amd64.tar.gz"
+      sha256 "f868147ca0cac6a1cb2ec7f687c7bc082de15e9eab149ac803916e6058af45aa"
 
       def install
         bin.install "yaegi"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/traefik/yaegi/releases/download/v0.11.3/yaegi_v0.11.3_linux_amd64.tar.gz"
-      sha256 "7bea6dda33f9ca672e89e394e8bc326c4a7dc1f3d5b7b572dc81fff2bfb05963"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/traefik/yaegi/releases/download/v0.12.0/yaegi_v0.12.0_linux_armv6.tar.gz"
+      sha256 "b3690016ecc78dddf65a212c15c8704d959dbdacbba58c5e9b0b590ac11015ce"
 
       def install
         bin.install "yaegi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/traefik/yaegi/releases/download/v0.11.3/yaegi_v0.11.3_linux_arm64.tar.gz"
-      sha256 "9f631835ba7f7d5370f5dcb820296adf17d72e15dedd54f65b78c36c8a312c7f"
+      url "https://github.com/traefik/yaegi/releases/download/v0.12.0/yaegi_v0.12.0_linux_arm64.tar.gz"
+      sha256 "fb9ea7c8563597301260c3bf91db2fec3441520a5c54441f6c9e54664eeb7b65"
 
       def install
         bin.install "yaegi"
