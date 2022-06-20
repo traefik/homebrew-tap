@@ -4,7 +4,7 @@
 
 [Homebrew Taps](https://docs.brew.sh/Taps)
 
-Homebrew Formulae to
+Homebrew Formulae to:
 
 - [Yaegi](https://github.com/traefik/yaegi) binaries.
 
@@ -12,4 +12,12 @@ Homebrew Formulae to
 brew tap traefik/tap
 brew update
 brew install yaegi
+```
+
+- [mocktail](https://github.com/traefik/mocktail) binaries.
+
+```sh
+brew tap traefik/tap
+brew update
+brew install mocktail
 ```
