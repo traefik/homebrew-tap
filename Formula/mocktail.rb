@@ -6,20 +6,20 @@ class Mocktail < Formula
   desc "Naive code generator that creates mock implementation using testify.mock.
 "
   homepage "https://github.com/traefik/mocktail"
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/traefik/mocktail/releases/download/v0.2.3/mocktail_v0.2.3_darwin_amd64.tar.gz"
-      sha256 "15b04d8e77e9687b8684a024b764dfe12e284805eaa5b2162e467166f2495f06"
+      url "https://github.com/traefik/mocktail/releases/download/v0.2.4/mocktail_v0.2.4_darwin_amd64.tar.gz"
+      sha256 "412b2a0cc10eea1c9cdf50265f66753548f3a716d05bf7a8e60d234e58584f51"
 
       def install
         bin.install "mocktail"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/traefik/mocktail/releases/download/v0.2.3/mocktail_v0.2.3_darwin_arm64.tar.gz"
-      sha256 "627709ad6ff751d2ac54453f70e1d2c2f70b61b6d8fa0075fab3ec07c772717a"
+      url "https://github.com/traefik/mocktail/releases/download/v0.2.4/mocktail_v0.2.4_darwin_arm64.tar.gz"
+      sha256 "cf0fff3b3dbceac978650f580405bf0dad12c71cac4f2daa05f6a5fcbae796a3"
 
       def install
         bin.install "mocktail"
@@ -29,16 +29,16 @@ class Mocktail < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/traefik/mocktail/releases/download/v0.2.3/mocktail_v0.2.3_linux_arm64.tar.gz"
-      sha256 "1f48f2501effcd93efc61994fd85c77513b63980178262999711bd4ee44402f6"
+      url "https://github.com/traefik/mocktail/releases/download/v0.2.4/mocktail_v0.2.4_linux_arm64.tar.gz"
+      sha256 "b27480fed94f7ca32c6d587714b43d952ab046e9fc0cb3cca68f920bd7a219be"
 
       def install
         bin.install "mocktail"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/traefik/mocktail/releases/download/v0.2.3/mocktail_v0.2.3_linux_amd64.tar.gz"
-      sha256 "37a1ca73c7744e30bf5c087735302049b6c3f68232b1d6fb236f6b882188ed03"
+      url "https://github.com/traefik/mocktail/releases/download/v0.2.4/mocktail_v0.2.4_linux_amd64.tar.gz"
+      sha256 "d18d528354ed81bbd534ba6bdf930e4cc404f15f8da9d76416552ecb558f17ab"
 
       def install
         bin.install "mocktail"
