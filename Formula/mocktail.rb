@@ -6,20 +6,20 @@ class Mocktail < Formula
   desc "Naive code generator that creates mock implementation using testify.mock.
 "
   homepage "https://github.com/traefik/mocktail"
-  version "0.2.4"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/traefik/mocktail/releases/download/v0.2.4/mocktail_v0.2.4_darwin_amd64.tar.gz"
-      sha256 "412b2a0cc10eea1c9cdf50265f66753548f3a716d05bf7a8e60d234e58584f51"
+    if Hardware::CPU.arm?
+      url "https://github.com/traefik/mocktail/releases/download/v0.3.0/mocktail_v0.3.0_darwin_arm64.tar.gz"
+      sha256 "6d8384ec8ad366622a63abaeb1f8959136b3189ec34d7e947a85b99987feb7cd"
 
       def install
         bin.install "mocktail"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/traefik/mocktail/releases/download/v0.2.4/mocktail_v0.2.4_darwin_arm64.tar.gz"
-      sha256 "cf0fff3b3dbceac978650f580405bf0dad12c71cac4f2daa05f6a5fcbae796a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/traefik/mocktail/releases/download/v0.3.0/mocktail_v0.3.0_darwin_amd64.tar.gz"
+      sha256 "c5448c4eee1ecc0bf68b532da3e874509a19a161e38ca1a4e723c0e0f50d9c79"
 
       def install
         bin.install "mocktail"
@@ -28,17 +28,17 @@ class Mocktail < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/traefik/mocktail/releases/download/v0.2.4/mocktail_v0.2.4_linux_arm64.tar.gz"
-      sha256 "b27480fed94f7ca32c6d587714b43d952ab046e9fc0cb3cca68f920bd7a219be"
+    if Hardware::CPU.intel?
+      url "https://github.com/traefik/mocktail/releases/download/v0.3.0/mocktail_v0.3.0_linux_amd64.tar.gz"
+      sha256 "535a0a92d59f86a019969d2c4564c8a19555f97ad05a644a93ccb304dd6442aa"
 
       def install
         bin.install "mocktail"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/traefik/mocktail/releases/download/v0.2.4/mocktail_v0.2.4_linux_amd64.tar.gz"
-      sha256 "d18d528354ed81bbd534ba6bdf930e4cc404f15f8da9d76416552ecb558f17ab"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/traefik/mocktail/releases/download/v0.3.0/mocktail_v0.3.0_linux_arm64.tar.gz"
+      sha256 "9a35de2db96b2d7a35898723e7afade788b7fe3bbc09517414440538cc1786a7"
 
       def install
         bin.install "mocktail"
